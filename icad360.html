@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICAD 360-HTML5v</title>
+</head>
+<body style="overflow-x: hidden;overflow-y:hidden">
+<editor-view>
+</editor-view>
+</body>
+<link rel="stylesheet" type="text/css" href="icadcss.css" />
+<script type="text/javascript" language="javascript" src="jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" language="javascript" src="LayerMenu.js"></script>
+<script type="text/javascript" language="javascript" src="Command.js"></script>
+<script type="text/javascript" language="javascript" src="DataBase.js"></script>
+<script type="text/javascript" language="javascript" src="DbObjects.js"></script>
+<script type="text/javascript" language="javascript" src="Property_Logic.js"></script>
+<script type="text/javascript" language="javascript" src="MouseTip.js"></script>
+<script type="text/javascript" language="javascript" src="ButtomTool.js"></script>
+<script type="text/javascript" language="javascript" src="LayerList.js"></script>
+<script type="text/javascript" language="javascript" src="Property_Html.js"></script>
+<script type="text/javascript" language="javascript" src="AnnCommand.js"></script>
+<script type="text/javascript" language="javascript" src="EditCommand.js"></script>
+<script type="text/javascript" language="javascript" src="DrawCommand.js"></script>
+<script type="text/javascript" language="javascript" src="Header.js"></script>
+<script type="text/javascript" language="javascript" src="DrawingFeedAPI.js"></script>
+<script type="text/ecmascript" a3:scriptImplementation="Adobe">
+
+
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)
+{
+	ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	var d = document.getElementById(data);
+	if(data == 'command_box')
+	{
+		var parent = d.parentNode;
+		var properties_box = document.getElementById("properties_box");
+		parent.appendChild(properties_box);
+		if(parent.id == "OBJDIV")
+		{
+			document.getElementById("OBJPROPERTYDIV").appendChild(d);
+		}
+		else
+		{
+			document.getElementById("OBJDIV").appendChild(d);
+		}
+	}
+	else
+	{
+		var parent = d.parentNode;
+		var command_box = document.getElementById("command_box");
+		parent.appendChild(command_box);
+		if(parent.id == "OBJDIV")
+		{
+			document.getElementById("OBJPROPERTYDIV").appendChild(d);
+		}
+		else
+		{
+			document.getElementById("OBJDIV").appendChild(d);
+		}
+	}
+}
+
+</script>
+</html>
