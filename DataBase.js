@@ -9,9 +9,9 @@ hCad(document).ready(function(){
 	h_5_cad.Header.Create();
 	h_5_cad.EditorTool.Create();
 	h_5_cad.Canvas.Create();
-	//h_5_cad.DrawCommand.Create();
-	//h_5_cad.EditCommand.Create();
-	//h_5_cad.AnnCommand.Create();
+	h_5_cad.DrawCommand.Create();
+	h_5_cad.EditCommand.Create();
+	h_5_cad.AnnCommand.Create();
 	h_5_cad.LayerList.Create();
 	h_5_cad.Property.Create();
 	h_5_cad.ButtomTool.Create();
@@ -30,9 +30,9 @@ cad=function()
 	this.EditorTool =new cad.EditorTool();
 	this.Implement = new cad.Implement();
 	this.Canvas=new cad.Canvas();
-	//this.DrawCommand=new cad.DrawCommand();
-	//this.EditCommand=new cad.EditCommand();
-	//this.AnnCommand=new cad.AnnCommand();
+	this.DrawCommand=new cad.DrawCommand();
+	this.EditCommand=new cad.EditCommand();
+	this.AnnCommand=new cad.AnnCommand();
 	this.Property=new cad.Property();
 	this.LayerList=new cad.LayerList();
 	this.ButtomTool=new cad.ButtomTool();
