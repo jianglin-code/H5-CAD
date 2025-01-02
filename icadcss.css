@@ -865,7 +865,7 @@ editor_Tool
 	float: left;
 	padding:0;
 	margin:0;
-	width: 41px;
+	width: 93px;
 	height: 29px;
 	text-align: center;
 	color: #666;
@@ -889,12 +889,12 @@ editor_Tool
 
 .openbook
 {
-	margin-top: 7px;
+	margin-top: 3px;
 	display: inline-block;
 	vertical-align: middle;
 	zoom: 1;
-	width: 16px;
-	height: 16px;
+	width: 70px;
+	height: 25px;
 	white-space: nowrap;
 	overflow: hidden;
 	-ms-text-overflow: ellipsis;
