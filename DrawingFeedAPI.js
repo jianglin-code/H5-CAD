@@ -8,7 +8,7 @@ FeedImageDraw=function(o){
 	var spt = WCS2UCS(o.P[0]);
 	var ept = WCS2UCS(o.P[1]);
 	var w = Math.abs(ept.X - spt.X);
-    var h  = Math.abs(ept.Y - spt.Y);
+	var h = Math.abs(ept.Y - spt.Y);
 
 	canvas.drawImage(img,spt.X,spt.Y,w,h);
 }
